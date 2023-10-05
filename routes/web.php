@@ -23,4 +23,5 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
     //Route::resource('/users', App\Http\Controllers\Admin\UsersController::class, ['except' => ['show', 'create', 'store']]);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/departments', App\Http\Controllers\Admin\DepartmentController::class, ['except' => ['show']]);
+    Route::resource('/services', App\Http\Controllers\Admin\ServiceController::class, ['except' => ['show']]);
 });
