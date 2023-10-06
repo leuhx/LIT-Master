@@ -14,4 +14,9 @@ class Service extends Model
         'description',
         'price'
     ];
+
+//    public function serviceOrders(): \Illuminate\Database\Eloquent\Relations\HasMany
+//    {
+//        return $this->hasMany(ServiceOrder::class);
+//    }
 }

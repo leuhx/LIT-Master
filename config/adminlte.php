@@ -316,7 +316,12 @@ return [
             'url'         => 'admin/home',
             'icon'        => 'fas fa-fw fa-home',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'CATEGORIAS'],
+        [
+            'text' => 'Ordens de Serviço',
+            'url'  => 'admin/service-orders',
+            'icon' => 'fas fa-fw fa-clipboard-list',
+        ],
         [
             'text' => 'Setores',
             'url'  => 'admin/departments',
@@ -395,16 +400,16 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
                 ],
             ],

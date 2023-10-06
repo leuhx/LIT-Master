@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ServiceOrder;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $total = ServiceOrder::all();
+        return view('home', [
+            'total' => $total->count(),
+            'valorTotal' => $total->sum('total_price')
+        ]);
     }
 }

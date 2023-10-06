@@ -13,4 +13,9 @@ class Department extends Model
         'name',
         'acronym'
     ];
+
+    public function serviceOrders(): \Illuminate\Database\Eloquent\Relations\Hasmany
+    {
+        return $this->hasMany(ServiceOrder::class);
+    }
 }
